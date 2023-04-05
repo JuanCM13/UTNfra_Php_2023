@@ -1,0 +1,176 @@
+***IIS, es un servidor montado en .NET, este servidor no seria multiplataforma nativamente. IIS (Internet information service)
+
+---Como el core de php esta escrito en C, podemos usar print, printf, con el uso de mascaras. Que harian lo mismo que el echo().------
+
+
+
+
+							PHP
+
+Orientado a lenguajes interpretados, no necesita un compilador, necesitan un interprete.
+
+.Es un lenguaje de codigo abierto, no restringe el uso, cualquiera puede montar un sitio con php, sin pagar nada por el lenguaje, permite crear diferentes, funcionalidades
+	para acoplar al lenguaje sin necesidad de pedir permiso. Extender el lenguaje, nace hace 30 años, la primer version salio en el 94.
+
+.Es recontra popular.
+
+.Se lo puede incrustar en HTML.
+
+.Php es un lenguaje de hipertexto, es texto chato que un interprete lo va a levantar y ejecutar. Es texto enriquecido y es levantado por este pre procesador. (PHP: HYPERTEXT PRE-PROCESSOR)
+
+.Es multiplatadorma, osea que puede ser corrido en distintas arquitecturas. 
+
+.Es invisible al navegador, no corre depende la maquina, sino que el interprete esta montado en la parte del host del servidor, asi que cualquier computadora con cualquier navegador
+	puede ser visto y funcional. Por que lo corre en si el servidor.
+
+.Capacidad de conexion a base de datos. 
+
+.Capacidad de expandir su potencial con plugins, osea desarrollar nuestras librerias, frameworks, importar librerias de otra persona etc.
+
+.PHP ES EL LENGUAJE MAS USADO A NIVEL MUNDIAL EN LA PARTE SERVIDOR. (DEL TOTAL DE SITIOS WEBS MONTADOS EN SERVIDORES, EL 80% LO OCUPA PHP, SEGUIDO DE UN 11% DE .ASP)
+
+
+
+
+
+
+						PHP ESTRUCTURA BASICA
+
+
+Todo va dentro de:
+
+<?php
+	
+	//Codigo php valido
+
+?>
+
+
+.Toda instruccion necesita finalizar con ;
+
+.Todo archivo php, tiene que tener la extension .php
+
+.Soporta comentarios con // , # o /* */
+
+
+	TIPOS DE VARIABLES (Tipado dinamico):
+
+	.Escalares:
+	.Booleano, int, float, string
+
+	.Compuestos				
+	.Array, Object
+	
+	.Datos Especiales:
+	.Resource, NULL
+
+.Las var, se declaran con el $ al comiennzo, son case sensitive. Usamos por estandard lowercamelcase.
+
+.El tipo puede ser redefinido, pero es mala practica!!
+
+
+
+			CONVERSION DE TIPOS
+
+
+Se realizan automaticamente dependiendo de lo que analice del contenido de la var, pero podemos explicitarla tmbien
+
+	TIPOS DE CONVERSION:
+
+	(int)
+	(bool)
+	(unset)
+	(object)
+	(array)
+	etc..
+
+
+			FUNCIONES DE CADENA:
+
+.strlen() , strcmp() strtoupper() etc..
+
+
+			
+
+			OPERADORES:
+
+Son iguales que en C, js, java etc son lo mismo
+
+
+
+
+
+
+			CONDICIONALES: (Misma sintaxis que siempre)
+
+	if()				if()					If()
+	HacerAlgo()			{					{
+						Hacer1()			}
+						Hacer2()			else
+					}					{
+										}
+
+
+			Switch($dato) Igual que siempre
+
+	
+			for($i=0;$i<10;$i++) igual que siempre
+
+
+			foreach($item as $valor) igual que siempre, cambia el formato dentro de parentesis
+
+
+			Para arrays asociativos, tanto para dewclararlos o para recorrerlos usar el operador flecha => foreach($item as $data => $listado)	
+
+
+			while($condicion == limite) igual que siempre
+			
+
+			do,while() igual que siempre					
+
+
+
+
+
+
+
+
+
+
+				ARRAYS
+
+
+.En php a bajo nivel todo es un array.
+
+
+3 tipos aca en PHP:
+
+.Array indexados (indice numerico)
+.Array asociativo (indices nombrados, mas como clave valor, onda diccionarios), la clave siempre tiene que ser string, el valor si puede ser lo que se me cante
+.Arrays multidimencionales (arrays que contienen otros arrays)
+
+
+INDEXADOS
+
+Primera forma de declarar
+$vec = array(1,2,3)
+var_dump($vec) //me lo recorre y muestra
+
+Segunda forma de declarar			
+$vec = 1;2;persona1 etc
+
+
+ASOCIADOS:
+
+primera forma de declarar
+$vec = array("juan"=>22,"pepe"=>3) etc
+var_dump($vec)
+
+segunda forma:
+$vec = [hugo]=15, etc;
+
+
+
+	FUNCIONES PARA ORDENAR ARRAYS
+
+sort(), rsort(), asort(), ksort(), arsort(), krsort()

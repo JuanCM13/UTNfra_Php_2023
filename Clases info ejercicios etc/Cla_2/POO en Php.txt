@@ -1,0 +1,139 @@
+			POO
+
+
+----------------Funciones propias en php
+
+.Se declaran con la palabra function
+.Pueden empezar con letra o guion bajo, no con numeros
+.No son case sensitive
+
+
+
+	Funciones propias en php
+
+pueden recibir parametros
+function NombreFuncion($param1,$param2 etc)
+{ no hace falta que devuelva}
+
+
+pueden retornar o no
+function NombreFuncion($param1,$param2 etc)
+{ return $x}
+
+
+-parametros por default
+function NombreFuncion($param1 = "valor",$param2, $param3 = "x")
+{ codigo }
+
+
+
+
+----------------Incluir archivos en PHP
+
+.Se incluyen con la palabra include/require, son identicas salvo en el caso de las fallas:
+	.required frena el script
+	.include solo levanta un warning y el script se sigue interpretando
+
+	ejemplos de uso:
+	.Siempre usar rutas relativas:
+	.include "rutaDelArchivo.php";
+	.required "rutaDelArchivo.php";
+	
+	-extra:
+	-no importa si ya lo importe antes, lo que hace es que si ya esta incluido, no trata de incluirlo
+	.include_once  (para no incluir un archivo que ya lo tiene, onda no generar dobles dependencias) 
+	.required_once (para no incluir un archivo que ya lo tiene, onda no generar dobles dependencias)
+
+
+
+
+----------------POO en PHP
+
+.Sintaxis Clases:
+	class NombreClase
+	{
+		por defecto si no agregamos mod de acceso, es privado
+		//Constructor, siempre se escribe asi:
+		public function __construct(){codigo}		
+
+		//atributos (variables pertenecientes a esta clase)
+		[modificador] $nombreAtributo;
+
+		//metodos (funciones que va a tener estos metodos)
+		[modificador] fucntion NombreMetodo{};
+	}
+
+
+.Sintaxis Objetos:
+
+.El operador -> para acceder a metodos de instancia
+.El operados :: para acceder a metodos miembros y demas estaticos
+
+para instancias:
+	$objeto = new NombreClase();
+
+
+--Dato: el $ se pone sobre el objeto, al atributo no:
+	$objeto->atributo; correcto
+	$objeto->$atributo; mal!
+
+
+de clase: 
+
+	NombreClase::atributo; 
+	NombreClase::Metodo; 
+
+
+
+	Herencia:
+
+.Herencia simple nomas
+.con palabra extends
+
+	class Base{
+		data
+	}
+
+	class Hija extends Base{
+	__construct()
+		parent::__construct() //asi llamo al constructor del base
+	}
+
+
+	POLIMORFISMO:
+
+.Una vez hecha la herencias, se ingresa a la clase base y lo podemos ingresar con parent:: lo que necesite, asi uso los metodos de la base.
+
+
+
+
+	INTERFACES
+
+.Se implementan con :implements
+.nomas va la firma del metodo
+.para declararla se usa generalmente como en c#, IInterfaz , IAgrandador etc
+
+	class Clase implements IInterfaz
+		{
+
+		}
+
+
+	CLASES ABSTRACTAS
+
+.Se declaran con abstract
+
+	abstract class Clase
+	public abstract function Funcion etc
+
+
+	CONSTRUCTORES:
+
+	Constructores magicos, setters magicos, getters magicos, googlear eso, son maneras de simularlos, ya que php no los posee
+
+.No se permite sobrecarga de constructores, pero la simulamos con parametros opcionales.
+
+public function __construct($marca, $color = ""), asi seteandolo como vacio, simulo operadores magicos, etc, para simular la sobrecarga
+	$coche = new(ford,rojo);
+	$coche = new(ford);
+

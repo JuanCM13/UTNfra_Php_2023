@@ -1,0 +1,21 @@
+*Facebook nacio al 100% con php, hoy en dia sigue teniendo gran parte montado ahi, lo mismo con ML.
+PHP ES RE LIVIANO Y MUY PERFORMANTE.
+	
+
+				CLIENTE - SERVIDOR
+
+
+El cliente pide una peticion a un servidor, y el servidor le sirve la respuesta-
+
+El servidor es un equipo, una computadora, preparada fisicamente para tener montadas aplicaciones que interpretan x lenguaje. Son equipos potentes, determinado hardware,
+	que van a estar constantemente escuchando peticiones de otros dispositivos (celulares, computadoras etc).
+
+Cuando el cliente hace una peticion, el servidor la levanta, la procesa y en base a ese analisis genera una respuesta.
+
+	CLIENTE -----(Peticion)----> INTERNET (CONEXION ENTRE CLIENTE Y SERVIDOR) -------(Peticion)----------->SERVIDOR
+
+
+	CLIENTE <--------(Respuesta)------ INTERNET <---------------------(Respuesta) SERVIDOR
+
+
+Si bien podemos devolver html con php, podemos hacer mucho mas, devolver pdfs etc.
